@@ -10,6 +10,7 @@ class SearchBar extends Component {
         }
 
         this.textChanged = this.textChanged.bind(this);
+        this.searchImage = this.searchImage.bind(this);
     }
 
     textChanged(event) {
@@ -18,13 +19,25 @@ class SearchBar extends Component {
         })
     }
     
+    searchImage(){
+        this.props.onSearchImage(this.state.searchWord);
+    }
     render() {
         return(
             <div className='search-bar-container ui input'>
                 <input type='text' 
                        placeholder='Search...' 
                        value = {this.state.searchWord}
-                       onChange={ this.textChanged } />
+                       onChange={ this.textChanged }
+                       onKeyPress={(e)=>{
+                           if(e.key === 'Enter'){
+                               this.searchImage();
+                           }
+                       }} />
+                <button className='ui icon button'
+                        onClick={this.searchImage} >
+                <i className='search icon'></i>
+                </button>
             </div>
         )
     }
