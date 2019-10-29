@@ -1,4 +1,6 @@
 .search-bar-container{
     flex: 1;
     padding: 0 20px;
+    display: flex;
+    flex-direction: row
 }

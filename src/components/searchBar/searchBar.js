@@ -26,7 +26,7 @@ class SearchBar extends Component {
         return(
             <div className='search-bar-container ui input'>
                 <input type='text' 
-                       placeholder='Search...' 
+                       placeholder='Ara..' 
                        value = {this.state.searchWord}
                        onChange={ this.textChanged }
                        onKeyPress={(e)=>{
