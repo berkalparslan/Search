@@ -6,11 +6,11 @@ import ImageList from './image/imageList';
 
 class App extends Component {
 
-    state= {
+    state= { 
+
         images: []
     }
-    onSearchImage = async (searchWord) => {
-        
+    onSearchImage = async (searchWord) => {        
         const url = 'https://api.unsplash.com/search/photos';
         const result = await axios.get(url, {
             params:{
