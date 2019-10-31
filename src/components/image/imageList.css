@@ -1,0 +1,14 @@
+.image-list-container{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+images {
+    width: 400px;
+}
+
+images:hover{
+    transform: scale(1.3);
+}

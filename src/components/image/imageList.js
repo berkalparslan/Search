@@ -1,4 +1,5 @@
 import React from 'react';
+import './imageList.css'
 
 const ImageList = ({images}) => {
     const preparedImageList = images.map(image=>{
@@ -7,8 +8,8 @@ const ImageList = ({images}) => {
         )
     })
     return(
-        <div>
-            {preparedImageList}
+        <div className='image-list-container'>
+            <images>{preparedImageList}</images>
         </div>
     )
 }
