@@ -1,16 +1,17 @@
 import React from 'react';
 import './imageList.css'
+import Image from './image'
 
 const ImageList = ({images}) => {
     const preparedImageList = images.map(image=>{
         return(
-            <img alt={image.id} key={image.id}  src={image.urls.small} />
+            <Image key={image.id} image = {image}/>
         )
     })
     return(
 
         <div className='image-list-container'>
-            <images>{preparedImageList}</images>
+            {preparedImageList}
         </div>
     )
 }

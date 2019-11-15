@@ -14,7 +14,6 @@ class App extends Component {
         const url = 'https://api.unsplash.com/search/photos';
         const result = await axios.get(url, {
             params:{
-
                 query: searchWord,
             },
             headers: {
